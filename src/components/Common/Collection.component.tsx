@@ -25,7 +25,11 @@ const Collection: React.FC<Props> = (props) => {
         <>
             {pokemons.map((item) => {
                 return (
-                    <div className="w-[15%] mt-[2rem]" onClick={() => selectPokemon(item.id)}>
+                    <div className="rounded-xl m-10 p-12 text-center" style={{
+                        backgroundColor: "rgb(222, 253, 224);",
+                        boxShadow: "0 3px 15px rgb(100 100 100 / 50%)"
+                    }} 
+                    onClick={() => selectPokemon(item.id)}>
                         <Card 
                             showPokemon={showPokemon}
                             setPokemonByName={setPokemonByName}

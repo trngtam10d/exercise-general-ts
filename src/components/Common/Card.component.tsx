@@ -29,18 +29,38 @@ const Card: React.FC<Props> = (props) => {
     return (
         <>
             {isChecked ? (
-                <></>
+                <>
+                    <section className="pokemon-list-detailed">
+                        <div className="detail-container">
+                            <p className="detail-close" onClick={handleClose}>
+                                X
+                            </p>
+                            <div className="detail-info">
+                                <img src={image} alt="pokemon" className="detail-img" />
+                                <p className="detail-name"> {name}</p>
+                            </div>
+                            <div className="detail-skill">
+                                <p className="detail-ability"> Ablities: </p>
+                                {abilities?.map((ab: any) => {
+                                    return <div className=""> {ab.ability.name}</div>;
+                                })}
+                            </div>
+                        </div>
+                    </section>
+                </>
             ) : (
                 <>
-                    <div className="flex w-full justify-center items-center rounded-lg bg-[#d9d9d9] text-[#d9d9d9]">
+                    <div className="bg-white rounded-full h-[120px] w-[120px] text-center">
                         <img src={image} loading="lazy" alt={name} className="w-full h-full" />
                     </div>
-                    <div className="flex justify-between items-center">
-                        <div className="mt-[0.3rem]">#001</div>
-                        <div className="pokemon__exp">EXP: 64</div>
+                    <div className="mt-12">
+                        <span className="bg-gray rounded-lg text-sm p-5">#001</span>
+                        <h3 className="tracking-[1px]" style={{ margin: "15px 0 7px" }}>{name}</h3>
+                        <small className="type">
+                            Type:
+                            <span>Grass</span>
+                        </small>
                     </div>
-                    <div className="text-[1.6rem]">{name}</div>
-                    <div className="bg-[#47ab57] flex w-[4.65rem] h-[1.39rem] justify-center items-center rounded-lg text-white text-[1.2rem]">Grass </div>
                 </>
             )}
         </>

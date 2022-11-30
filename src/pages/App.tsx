@@ -95,7 +95,7 @@ const App: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex mt-[1.74rem] flex-wrap" style={{ gridColumnGap: "2%", gridRowGap: "2%" }}>
+                            <div className="flex justify-center flex-wrap m-0 max-w-screen-xl">
                                 <Collection
                                     pokemons={pokemons}
                                     showPokemon={showPokemon}

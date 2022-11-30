@@ -18,6 +18,7 @@ module.exports = {
       "yellow": '#acb625',
       'white': '#eee',
       'black': 'rgb(0 0 0)',
+      'gray': '#2222'
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
