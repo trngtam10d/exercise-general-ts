@@ -1,6 +1,7 @@
 import * as React from "react";
 import axios from "axios";
 
+import Header from "../components/Layout/Header.component";
 import Wrapper from "../components/Layout/Wrapper.component";
 import Logo from "../components/Layout/Logo.component";
 import Search from "../components/Common/Search.component";
@@ -48,72 +49,80 @@ const App: React.FC = () => {
     };
 
     return (
-        <div className="relative overflow-hidden w-full">
-            <Wrapper />
-            <main className="main-wrapper">
-                <section className="section">
-                    <div className="container mx-auto">
-                        <Logo />
-                        <Search />
-                        <div className="pt-[2.43rem]">
-                            <div className="flex justify-between items-center">
-                                <div className="w-[60%]">
-                                    <div className="text-block">Filter by type:</div>
-                                    {/* <div className="filter__type-wrapper">
-                                        <div className="filter__type is--normal">Normal</div>
-                                        <div className="filter__type is--grass">Grass</div>
-                                        <div className="filter__type is--fire">Fire</div>
-                                        <div className="filter__type is--water">Water</div>
-                                        <div className="filter__type is--bug">Bug</div>
-                                        <div className="filter__type is--electric">Electric</div>
-                                        <div className="filter__type is--rock">Rock</div>
-                                        <div className="filter__type is--ghost">Ghost</div>
-                                        <div className="filter__type is--poison">Poison</div>
-                                        <div className="filter__type is--psychic">Psychic</div>
-                                        <div className="filter__type is--fighting">Fighting</div>
-                                        <div className="filter__type is--ground">Ground</div>
-                                        <div className="filter__type is--dragon">Dragon</div>
-                                        <div id="btnClear" className="filter__type is--clear">Reset</div>
-                                    </div> */}
-                                </div>
-                                <div className="main__sort">
-                                    <div className="mb-0" style={{ margin: "0 0 15px" }}>
-                                        <form method="get" className="sort__select-wrapper">
-                                            <select className="w-[11.1rem] h-[2rem] mb-0 rounded-lg bg-black text-white text-[12px]">
-                                                <option value="id-asc">ID ASC</option>
-                                                <option value="id-dsc">ID DSC</option>
-                                                <option value="base_experience-asc">Base Experience ASC</option>
-                                                <option value="base_experience-dsc">Base Experience DSC</option>
-                                            </select>
-                                        </form>
-                                        <div className="w-form-done">
-                                            <div>Thank you! Your submission has been received!</div>
-                                        </div>
-                                        <div className="w-form-fail">
-                                            <div>Oops! Something went wrong while submitting the form.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="flex justify-center flex-wrap m-0 max-w-screen-xl">
-                                <Collection
-                                    pokemons={pokemons}
-                                    showPokemon={showPokemon}
-                                    setPokemonByName={setPokemonByName}
-                                />
-                            </div>
-                            {!showPokemon.isOpened && (
-                                <div className="btn text-center mt-10 mb-10">
-                                    <button onClick={nextPage} className="bg-yellow hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-                                        {loading ? "Loading..." : "Load more"}{" "}
-                                    </button>
-                                </div>
-                            )}
+        <>
+            <Header />
+            {/* <Wrapper /> */}
+            <main className="xl:max-w-[1400px] xl:min-w-[950px] xl:m-auto bg-content-pokemon bg-top bg-no-repeat bg-auto bg-black relative overflow-hidden">
+                <div className="text-black text-md leading-[1.6] max-w-[1400px] w-full" style={{margin: '0 auto'}}>
+                    {/* Heading main */}
+                    <div className="md:w-full md:bg-heading-list z-110 relative after:content-[''] after:h-0 after:block after:pt-[9.28571429%]" style={{backgroundSize: '100% auto',margin: '0 auto'}}>
+                        <div className="pokemon-list__header__inner">
+                            <a href="/">
+                                <span className="xl:text-small absolute top-[48%] left-[50%] text-center text-black w-[30%]" style={{transform: 'translate(-50%,-50%)'}}>Tra cứu Pokémon</span>
+                            </a>
                         </div>
                     </div>
-                </section>
+                    {/* Main list */}
+                    <div className="relative z-xl md:after:pt-[25.571429%] after:content-[''] after:h-0 after:block">
+                        <div className="md:absolute md:top-[-45%] md:left-0 w-full">
+                            {/* md:animate-spin-slow  */}
+                            <img src="https://vn.portal-pokemon.com/play/resources/pokedex/img/pokemon_list_bg.png" className="w-full" />
+                            <div>
+                                <div className="md:m-ml top-0 left-0 absolute text-center opacity-0 
+                                    md:before:content-[''] md:before:h-0 md:before:block md:before:pt-[67%]
+                                    md:after:content-[''] md:after:h-0 md:after:block md:after:pt-[21.42857143%]"
+                                    style={{ animationName: 'random_pokemon', animationDuration: '2s', animationFillMode: 'both', animationDelay: '.6s'}}>
+                                    <a href="/057">
+                                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png" className="w-full bg-cut-pokemon p-[8%]" style={{backgroundSize: '100% auto'}}/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="md:m-ml md:w-[8.92857143%] top-[40%] left-[5%] absolute text-center opacity-0 
+                                    md:before:content-[''] md:before:h-0 md:before:block md:before:pt-[67%]
+                                    md:after:content-[''] md:after:h-0 md:after:block md:after:pt-[21.42857143%]"
+                                    style={{ animationName: 'random_pokemon', animationDuration: '2s', animationFillMode: 'both', animationDelay: '1.6s'}}>
+                                    <a href="/057">
+                                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png" className="w-full bg-cut-pokemon p-[8%]" style={{backgroundSize: '100% auto'}}/>
+                                    </a>
+                                </div>
+                            </div>
+                            {/* <div>
+                                <div className="md:my-[39.28571429%] top-0 left-0 absolute text-center opacity-0 
+                                    md:before:content-[''] md:before:h-0 md:before:block md:before:pt-[67%]
+                                    md:after:content-[''] md:after:h-0 md:after:block md:after:pt-[21.42857143%]"
+                                >
+                                    <a href="/057">
+                                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png" className="w-full bg-cut-pokemon p-[8%]" style={{backgroundSize: '100% auto'}}/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="md:my-[39.28571429%] top-0 left-0 absolute text-center opacity-0 
+                                    md:before:content-[''] md:before:h-0 md:before:block md:before:pt-[67%]
+                                    md:after:content-[''] md:after:h-0 md:after:block md:after:pt-[21.42857143%]"
+                                >
+                                    <a href="/057">
+                                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png" className="w-full bg-cut-pokemon p-[8%]" style={{backgroundSize: '100% auto'}}/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="md:my-[39.28571429%] top-0 left-0 absolute text-center opacity-0 
+                                    md:before:content-[''] md:before:h-0 md:before:block md:before:pt-[67%]
+                                    md:after:content-[''] md:after:h-0 md:after:block md:after:pt-[21.42857143%]"
+                                >
+                                    <a href="/057">
+                                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png" className="w-full bg-cut-pokemon p-[8%]" style={{backgroundSize: '100% auto'}}/>
+                                    </a>
+                                </div>
+                            </div> */}
+                        </div>
+                    </div>
+                </div>
+                
             </main>
-        </div>
+        </>
     );
 };
 

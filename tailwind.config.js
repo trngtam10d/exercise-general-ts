@@ -5,8 +5,9 @@ module.exports = {
     fontSize: {
       sm: '0.8rem',
       base: '1rem',
-      ml: '2rem',
       xl: '1.25rem',
+      md: '1.6rem',
+      small: '2.8rem'
     },
     screens: {
       sm: '480px',
@@ -32,8 +33,19 @@ module.exports = {
       borderRadius: {
         '4xl': '2rem',
       },
-      padding: {
-        '8px': '8px',
+      backgroundImage: {
+        'content-pokemon': "url('https://vn.portal-pokemon.com/play/resources/pokedex/img/list_top_bg.jpg')",
+        'heading-list': "url('https://vn.portal-pokemon.com/play/resources/pokedex/img/pokedex_bg.png')",
+        'cut-pokemon': "url('https://vn.portal-pokemon.com/play/resources/pokedex/img/random_center_bg.png')"
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
+      zIndex: {
+        'xl': 100
+      },
+      margin: {
+        'ml': '0 39.28571429%'
       }
     }
   },
