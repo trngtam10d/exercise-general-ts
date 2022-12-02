@@ -23,6 +23,7 @@ module.exports = {
       'gray': '#2222',
       "blue": '#b3eafe',
       'main': '#0a141e',
+      'hover_gain' : 'hsla(0,0%,100%,.3)',
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],

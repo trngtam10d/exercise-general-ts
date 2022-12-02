@@ -140,12 +140,12 @@ const App: React.FC = () => {
                                     <div className={`md:bg-select-open bg-auto relative ${isChecked ? "md:after:pt-[15.82278481%] after:content-[''] after:h-0 after:block" : "" }`}></div> 
                                     <div className="md:bg-select-open bg-auto bg-sort relative bg-no-repeat">
                                         <ul className="p-sml">
-                                            <li className="text-white w-[86%] m-auto_1 text-center p-lml cursor-pointer">Số thấp nhất (trước)</li> 
-                                            <li className="text-white w-[86%] m-auto_1 text-center p-lml cursor-pointer">Số cao nhất (trước)</li> 
-                                            <li className="text-white w-[86%] m-auto_1 text-center p-lml cursor-pointer">Cân nặng thấp nhất (trước)</li> 
-                                            <li className="text-white w-[86%] m-auto_1 text-center p-lml cursor-pointer">Cân nặng cao nhất (trước)</li> 
-                                            <li className="text-white w-[86%] m-auto_1 text-center p-lml cursor-pointer">Chiều cao thấp nhất (trước)</li> 
-                                            <li className="text-white w-[86%] m-auto_1 text-center p-lml cursor-pointer">Chiều cao cao nhất (trước)</li>
+                                            <li className="text-white w-[86%] m-auto_1 text-center p-lml cursor-pointer md:hover:bg-hover_gain" style={{transition: "hsla(0,0%,100%,.3) .5s"}}>Số thấp nhất (trước)</li> 
+                                            <li className="text-white w-[86%] m-auto_1 text-center p-lml cursor-pointer md:hover:bg-hover_gain" style={{transition: "hsla(0,0%,100%,.3) .5s"}}>Số cao nhất (trước)</li> 
+                                            <li className="text-white w-[86%] m-auto_1 text-center p-lml cursor-pointer md:hover:bg-hover_gain" style={{transition: "hsla(0,0%,100%,.3) .5s"}}>Cân nặng thấp nhất (trước)</li> 
+                                            <li className="text-white w-[86%] m-auto_1 text-center p-lml cursor-pointer md:hover:bg-hover_gain" style={{transition: "hsla(0,0%,100%,.3) .5s"}}>Cân nặng cao nhất (trước)</li> 
+                                            <li className="text-white w-[86%] m-auto_1 text-center p-lml cursor-pointer md:hover:bg-hover_gain" style={{transition: "hsla(0,0%,100%,.3) .5s"}}>Chiều cao thấp nhất (trước)</li> 
+                                            <li className="text-white w-[86%] m-auto_1 text-center p-lml cursor-pointer md:hover:bg-hover_gain" style={{transition: "hsla(0,0%,100%,.3) .5s"}}>Chiều cao cao nhất (trước)</li>
                                         </ul>
                                     </div>
                                 </div>
