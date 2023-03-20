@@ -2,6 +2,7 @@
 .env
 .env.local
 .env.testing
+.env.staging
 .env.production
 
 # !node_modules/
